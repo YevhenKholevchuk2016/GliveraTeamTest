@@ -6,7 +6,7 @@ import fs from 'fs'
 const { src } = pkg
 
 function setStringSrc(typeFIle, dataSrc) {
-  return typeFIle === '.css' ? `<link href="${dataSrc}" rel="stylesheet" />` : `<script src="/${dataSrc}"></script>`
+  return typeFIle === '.css' ? `<link href="${dataSrc}" rel="stylesheet" />` : `<script src="${dataSrc}"></script>`
 }
 
 // eslint-disable-next-line import/prefer-default-export
