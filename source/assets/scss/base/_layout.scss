@@ -20,7 +20,7 @@ body {
     grid-template-columns: 306px 1fr;
   }
   &__inner-container {
-    height: 100vh;
+    height: 100dvh;
     overflow-y: auto;
     @supports (scrollbar-gutter: stable both-edges) {
       scrollbar-gutter: stable both-edges;
