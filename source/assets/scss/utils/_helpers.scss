@@ -1,6 +1,11 @@
 .d-none {
   display: none !important;
 }
+.disabled-scroll {
+  .main-wrapper__inner-container {
+    overflow-y: hidden;
+  }
+}
 
 @each $size in (50) {
   @each $val in ((t, top), (b, bottom), (l, left), (r, right)) {
@@ -23,3 +28,15 @@
     row-gap: #{$gap}px !important;
   }
 }
+/* stylelint-disable */
+@each $ellipsis-line in (2, 3) {
+  .txt-ellipsis-#{$ellipsis-line} {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: #{$ellipsis-line};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+/* stylelint-enable */

@@ -3,11 +3,12 @@
 .sidebar {
   display: flex;
   position: absolute;
+  z-index: $sidebar;
   top: 0;
   flex-direction: column;
   width: 306px;
   height: 100vh;
-  padding: 36px 28px 76px;
+  padding: 26px 28px;
   overflow-y: auto;
   transition:
     opacity 0.225s ease,
@@ -21,8 +22,17 @@
   @supports (scrollbar-gutter: stable both-edges) {
     scrollbar-gutter: stable both-edges;
   }
+  @include for-tablet-up {
+    padding-top: 36px;
+    padding-bottom: 76px;
+  }
   @include for-wide-desktop-up {
     position: sticky;
+    opacity: 1;
+    pointer-events: initial;
+    translate: 0 0;
+  }
+  &.is-opened {
     opacity: 1;
     pointer-events: initial;
     translate: 0 0;

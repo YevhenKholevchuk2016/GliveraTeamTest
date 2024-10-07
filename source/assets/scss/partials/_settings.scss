@@ -35,6 +35,10 @@ $app-colors: (
   ),
 );
 
+// z-index
+$sidebar: 1;
+$hamburger: $sidebar + 1;
+
 // statics
 $path-to-static-images: '/assets/images/';
 $path-to-static-fonts: '/assets/fonts/';

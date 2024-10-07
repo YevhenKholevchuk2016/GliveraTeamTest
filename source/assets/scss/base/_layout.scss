@@ -26,6 +26,19 @@ body {
       scrollbar-gutter: stable both-edges;
     }
   }
+  &__hamburger {
+    position: absolute;
+    z-index: $hamburger;
+    top: 8px;
+    right: 8px;
+    opacity: 1;
+    pointer-events: initial;
+    will-change: opacity;
+    @include for-wide-desktop-up {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 }
 .container {
   max-width: 1000px;
