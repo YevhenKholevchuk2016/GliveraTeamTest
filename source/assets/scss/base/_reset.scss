@@ -307,4 +307,18 @@ textarea {
 [hidden] {
   display: none;
 }
+::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-clip: content-box;
+  // stylelint-disable prettier/prettier
+  background-color: rgba(color(complementary-colors, scrollbar-color), 0.25);
+  &:hover {
+    background-color: rgba(color(complementary-colors, scrollbar-color), 0.5);
+  }
+  // stylelint-enable prettier/prettier
+}
 // stylelint-enable no-duplicate-selectors

@@ -1,88 +1,46 @@
+@use 'sass:color';
+
 // stylelint-disable scss/dollar-variable-empty-line-after, max-nesting-depth
 .pagination {
   $_this: &;
   display: flex;
   align-items: center;
-  height: 40px;
-  &__button,
-  &__item {
+  column-gap: 12px;
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 40px;
-    min-height: 40px;
-    margin: 0 1px;
-    padding: 8px;
-    transition: all 0.225s ease;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    text-align: center;
+    width: 26px;
+    height: 24px;
+    transition: background-color 0.225s ease;
+    border: 1px solid color(gray, 100);
+    border-radius: 4px;
+    background-color: color(gray, 150);
+    color: color(gray, 500);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.12px;
     cursor: pointer;
-    &:not(#{$_this}__item--active):hover {
-      background-color: color(light, secondary-hover);
-      color: black;
+    &:not(#{$_this}__link--active):hover {
+      background-color: color.change(color(gray, 150), $blackness: 10%);
     }
-    &:not(#{$_this}__item--active):focus-visible {
-      border-color: color(light, secondary);
+    &:not(#{$_this}__link--active):active {
+      background-color: color.change(color(gray, 150), $blackness: 30%);
+    }
+    &:focus-visible {
       outline: none;
-      background-color: color(light, secondary-hover);
+      box-shadow: 0 0 2px 2px rgba(226, 236, 249, 0.85);
+    }
+    &--text {
+      width: initial;
+      border: 0 none;
+      background-color: transparent;
     }
     &--active {
-      background-color: color(light, primary);
-      color: white !important;
+      border-color: color(violet, 400);
+      background-color: color(violet, 400);
+      color: white;
     }
-    &--prev-group,
-    &--next-group {
-      display: flex;
-      position: relative;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
-      padding-right: initial;
-      padding-left: initial;
-
-      #{$_this}__icon {
-        position: absolute;
-      }
-    }
-    &--prev-group {
-      #{$_this}__icon {
-        &:nth-child(1) {
-          left: 2px;
-        }
-        &:nth-child(2) {
-          left: 8px;
-        }
-      }
-    }
-    &--next-group {
-      #{$_this}__icon {
-        &:nth-child(1) {
-          right: 2px;
-        }
-        &:nth-child(2) {
-          right: 8px;
-        }
-      }
-    }
-  }
-  &__icon {
-    width: 12px;
-    height: 12px;
-    &--next,
-    &--next-group {
-      transform: rotate(180deg);
-    }
-  }
-  &__item {
-    position: relative;
-    padding-right: 8px;
-    padding-left: 8px;
-    color: #7c7b88;
-    font-size: $font-md;
-    font-weight: 500;
-    cursor: pointer;
   }
 }
 // stylelint-enable scss/dollar-variable-empty-line-after, max-nesting-depth

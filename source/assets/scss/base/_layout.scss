@@ -22,6 +22,9 @@ body {
   &__inner-container {
     height: 100vh;
     overflow-y: auto;
+    @supports (scrollbar-gutter: stable both-edges) {
+      scrollbar-gutter: stable both-edges;
+    }
   }
 }
 .container {

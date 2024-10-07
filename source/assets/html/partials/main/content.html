@@ -19,6 +19,10 @@
           </div>
         </div>
         @@include('partials/main/partials/table.html', { "additional-class": "card__table" })
+        <footer class="card__footer">
+          <p class="card__footer-info">Showing data 1 to 8 of  256K entries</p>
+          @@include('partials/common/pagination.html', { "additional-class": "card__pagination" })
+        </footer>
       </div>
     </div>
   </div>

@@ -66,4 +66,26 @@
   &__table {
     margin-top: 25px;
   }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    @include for-tablet-up {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__footer-info {
+    color: color(gray, 300);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.14px;
+    line-height: math.div(21, 14);
+  }
+  &__pagination {
+    margin-top: 12px;
+    @include for-tablet-up {
+      margin-top: initial;
+    }
+  }
 }

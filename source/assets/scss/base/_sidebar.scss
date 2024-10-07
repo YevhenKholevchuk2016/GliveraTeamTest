@@ -13,6 +13,9 @@
   pointer-events: none;
   translate: -100% 0;
   will-change: opacity, translate;
+  @supports (scrollbar-gutter: stable both-edges) {
+    scrollbar-gutter: stable both-edges;
+  }
   @include for-wide-desktop-up {
     position: sticky;
     opacity: 1;

@@ -7,11 +7,13 @@ $base-font-size: 16px;
 $app-colors: (
   gray: (
     100: #eee,
+    150: #f5f5f5,
     200: #fafbff,
     250: #f9fbff,
     300: #b5b7c0,
     350: #7e7e7e,
     400: #292d32,
+    500: #404b52,
   ),
   green: (
     400: #16c098,
@@ -21,6 +23,12 @@ $app-colors: (
   red: (
     400: #ffc5c5,
     500: #df0404,
+  ),
+  violet: (
+    400: #5932ea,
+  ),
+  complementary-colors: (
+    scrollbar-color: #526173,
   ),
 );
 

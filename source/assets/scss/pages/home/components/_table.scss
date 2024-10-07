@@ -9,8 +9,22 @@ $areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23,
   }
   &__table-header {
     display: none;
+    position: relative;
     @include for-desktop-up {
       display: block;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -24px;
+      width: calc(100% + 48px);
+      height: 1px;
+      background-color: color(gray, 100);
+      @include for-wide-desktop-up {
+        left: -40px;
+        width: calc(100% + 80px);
+      }
     }
     .customers__table-cell {
       @include for-desktop-up {
