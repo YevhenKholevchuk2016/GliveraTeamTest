@@ -22,7 +22,7 @@
   @supports (scrollbar-gutter: stable both-edges) {
     scrollbar-gutter: stable both-edges;
   }
-  @include for-tablet-up {
+  @include for-laptop-up {
     padding-top: 36px;
     padding-bottom: 76px;
   }
@@ -51,6 +51,7 @@
   }
   &__navigation {
     margin-top: 52px;
+    margin-bottom: 52px;
   }
   &__manager {
     display: flex;
