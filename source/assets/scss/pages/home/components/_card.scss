@@ -65,14 +65,23 @@
   }
   &__table {
     margin-top: 25px;
+    @include for-tablet-up {
+      overflow-x: auto;
+    }
+    @include for-laptop-up {
+      overflow-x: initial;
+    }
   }
   &__footer {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 20px;
     @include for-tablet-up {
       flex-direction: row;
       justify-content: space-between;
+    }
+    @include for-laptop-up {
+      margin-top: 30px;
     }
   }
   &__footer-info {

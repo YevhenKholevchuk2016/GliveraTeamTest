@@ -6,5 +6,29 @@
          src="@@images_common_path__logo.svg"
          alt="dashboard logo"
     />
+    <span class="sidebar__app-version">v.01</span>
   </div>
+  @@include('base/layout/partials/navigation.html', { "additional-class": "sidebar__navigation" })
+  <figure class="sidebar__manager">
+    <picture>
+      <source type="image/webp"
+              srcset="@@images_common_path__project_manager.webp, @@images_common_path__project_manager@2x.webp 2x"
+      >
+      <source type="image/jpeg"
+              srcset="@@images_common_path__project_manager.jpg, @@images_common_path__project_manager@2x.jpg 2x"
+      >
+      <img class="sidebar__manager-image"
+           width="42"
+           height="42"
+           loading="lazy"
+           srcset="@@images_common_path__project_manager@2x.jpg 2x"
+           src="@@images_common_path__project_manager.jpg"
+           alt="project manager"
+      >
+    </picture>
+    <figcaption class="sidebar__manager-caption">
+      <h3 class="sidebar__manager-title">Evano</h3>
+      <p class="sidebar__manager-position">Project Manager</p>
+    </figcaption>
+  </figure>
 </aside>

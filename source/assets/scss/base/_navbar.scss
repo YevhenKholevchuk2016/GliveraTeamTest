@@ -1,0 +1,80 @@
+@use 'sass:math';
+@use 'sass:color';
+
+// stylelint-disable scss/dollar-variable-empty-line-after, max-nesting-depth
+.navbar {
+  $_this: &;
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    padding-right: 8px;
+    padding-left: 11px;
+    column-gap: 14px;
+    transition:
+      background-color 0.225s ease,
+      color 0.225s ease;
+    border-radius: 8px;
+    color: color(gray, 600);
+    font-size: 14px;
+    letter-spacing: -0.14px;
+    line-height: math.div(21, 14);
+    cursor: pointer;
+    &:not(#{$_this}__link--active):hover {
+      background-color: color.change(color(violet, 400), $lightness: 70%);
+      color: white;
+      #{$_this}__icon,
+      #{$_this}__arrow-icon {
+        fill: white;
+      }
+    }
+    &:not(#{$_this}__link--active):active {
+      background-color: color(violet, 400);
+      color: white;
+      #{$_this}__icon,
+      #{$_this}__arrow-icon {
+        fill: white;
+      }
+    }
+    &--active {
+      background-color: color(violet, 400);
+      color: white;
+      cursor: default;
+      #{$_this}__icon,
+      #{$_this}__arrow-icon {
+        fill: white;
+      }
+    }
+  }
+  &__icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: color(gray, 600);
+  }
+  &__icon-arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+  }
+  &__arrow-icon {
+    width: 10px;
+    height: 10px;
+    fill: color(gray, 600);
+  }
+}
+// stylelint-enable scss/dollar-variable-empty-line-after, max-nesting-depth

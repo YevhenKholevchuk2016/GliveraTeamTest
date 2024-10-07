@@ -53,7 +53,115 @@
          src="/assets/images/pages/common/logo.svg"
          alt="dashboard logo"
     />
+    <span class="sidebar__app-version">v.01</span>
   </div>
+  <nav class="navbar sidebar__navigation">
+  <ul class="navbar__nav">
+    <li class="navbar__item">
+      <a class="navbar__link" href="javascript:">
+        <span class="navbar__icon-container">
+          <svg class="custom-icon navbar__icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-dashboard"></use>
+          </svg>
+        </span>
+        Dashboard
+      </a>
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link" href="javascript:">
+        <span class="navbar__icon-container">
+          <svg class="custom-icon navbar__icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-product"></use>
+          </svg>
+        </span>
+        Product
+      </a>
+    </li>
+    <li class="navbar__item">
+      <span class="navbar__link navbar__link--active">
+        <span class="navbar__icon-container">
+          <svg class="custom-icon navbar__icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-customers"></use>
+          </svg>
+        </span>
+        Customers
+        <span class="navbar__icon-arrow-container">
+          <svg class="custom-icon navbar__arrow-icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-chevron-right"></use>
+          </svg>
+        </span>
+      </span>
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link" href="javascript:">
+        <span class="navbar__icon-container">
+          <svg class="custom-icon navbar__icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-income"></use>
+          </svg>
+        </span>
+        Income
+        <span class="navbar__icon-arrow-container">
+          <svg class="custom-icon navbar__arrow-icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-chevron-right"></use>
+          </svg>
+        </span>
+      </a>
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link" href="javascript:">
+        <span class="navbar__icon-container">
+          <svg class="custom-icon navbar__icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-promote"></use>
+          </svg>
+        </span>
+        Promote
+        <span class="navbar__icon-arrow-container">
+          <svg class="custom-icon navbar__arrow-icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-chevron-right"></use>
+          </svg>
+        </span>
+      </a>
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link" href="javascript:">
+        <span class="navbar__icon-container">
+          <svg class="custom-icon navbar__icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-help"></use>
+          </svg>
+        </span>
+        Help
+        <span class="navbar__icon-arrow-container">
+          <svg class="custom-icon navbar__arrow-icon">
+            <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-chevron-right"></use>
+          </svg>
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <figure class="sidebar__manager">
+    <picture>
+      <source type="image/webp"
+              srcset="/assets/images/pages/common/project_manager.webp, /assets/images/pages/common/project_manager@2x.webp 2x"
+      >
+      <source type="image/jpeg"
+              srcset="/assets/images/pages/common/project_manager.jpg, /assets/images/pages/common/project_manager@2x.jpg 2x"
+      >
+      <img class="sidebar__manager-image"
+           width="42"
+           height="42"
+           loading="lazy"
+           srcset="/assets/images/pages/common/project_manager@2x.jpg 2x"
+           src="/assets/images/pages/common/project_manager.jpg"
+           alt="project manager"
+      >
+    </picture>
+    <figcaption class="sidebar__manager-caption">
+      <h3 class="sidebar__manager-title">Evano</h3>
+      <p class="sidebar__manager-position">Project Manager</p>
+    </figcaption>
+  </figure>
 </aside>
 	<div class="main-wrapper__inner-container">
 
@@ -248,7 +356,7 @@
       </a>
     </li>
     <li class="pagination__item">
-      <a class="pagination__link pagination__link--active" href="javascript:">1</a>
+      <span class="pagination__link pagination__link--active">1</span>
     </li>
     <li class="pagination__item">
       <a class="pagination__link" href="javascript:">2</a>

@@ -1,16 +1,10 @@
 $areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23, col_24, col_25, col_26);
 
 .customers {
-  &__table {
-    @include for-desktop-up {
-      // border-top: 1px solid color(gray, 400);
-      // border-left: 1px solid color(gray, 400);
-    }
-  }
   &__table-header {
     display: none;
     position: relative;
-    @include for-desktop-up {
+    @include for-tablet-up {
       display: block;
     }
     &:after {
@@ -27,7 +21,7 @@ $areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23,
       }
     }
     .customers__table-cell {
-      @include for-desktop-up {
+      @include for-tablet-up {
         display: flex;
         align-items: center;
         font-size: 14px;
@@ -51,7 +45,7 @@ $areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23,
     display: flex;
     flex-direction: column;
     row-gap: 16px;
-    @include for-desktop-up {
+    @include for-tablet-up {
       display: block;
     }
   }
@@ -68,10 +62,10 @@ $areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23,
     padding-bottom: 16px;
     border-bottom: 1px solid color(gray, 100);
     row-gap: 8px;
-    @include for-desktop-up {
+    @include for-tablet-up {
       grid-template-areas: initial;
       grid-template-columns:
-        minmax(160px, 180px) minmax(100px, 140px) minmax(140px, 154px) minmax(180px, 221px) minmax(120px, 140px)
+        minmax(160px, 180px) minmax(100px, 148px) minmax(140px, 154px) minmax(180px, 221px) minmax(120px, 140px)
         minmax(84px, 84px);
       padding-bottom: initial;
       border-bottom: 0 none;
@@ -83,7 +77,7 @@ $areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23,
         minmax(84px, 84px);
     }
     :nth-child(1 of .customers__table-cell--value) {
-      @include for-desktop-up {
+      @include for-tablet-up {
         padding-left: 0;
         font-weight: 500;
       }
@@ -93,7 +87,7 @@ $areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23,
     @include trim;
     font-size: 14px;
     font-weight: 500;
-    @include for-desktop-up {
+    @include for-tablet-up {
       padding: 24px 0;
       border-bottom: 1px solid color(gray, 100);
       line-height: 30px;
@@ -106,7 +100,7 @@ $areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23,
       &:nth-child(#{$i}) {
         grid-area: nth($areas, $i);
         padding-right: 8px;
-        @include for-desktop-up {
+        @include for-tablet-up {
           grid-area: initial;
           padding-right: 5px;
           padding-left: 5px;
@@ -114,14 +108,14 @@ $areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23,
       }
     }
     &:nth-last-child(-n + 1) {
-      @include for-desktop-up {
+      @include for-tablet-up {
         padding-right: 0;
         padding-left: 4px;
       }
     }
     // stylelint-enable scss/no-global-function-names
     &--name {
-      @include for-desktop-up {
+      @include for-tablet-up {
         display: none;
       }
     }
