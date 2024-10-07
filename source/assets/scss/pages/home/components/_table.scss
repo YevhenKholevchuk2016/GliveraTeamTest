@@ -1,0 +1,108 @@
+$areas: (col_11, col_12, col_13, col_14, col_15, col_16, col_21, col_22, col_23, col_24, col_25, col_26);
+
+.customers {
+  &__table {
+    @include for-desktop-up {
+      // border-top: 1px solid color(gray, 400);
+      // border-left: 1px solid color(gray, 400);
+    }
+  }
+  &__table-header {
+    display: none;
+    @include for-desktop-up {
+      display: block;
+    }
+    .customers__table-cell {
+      @include for-desktop-up {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+    // stylelint-disable max-nesting-depth
+    .customers__table-row {
+      .customers__table-cell {
+        &.customers__table-cell--header-name {
+          color: color(gray, 300);
+          &:last-child {
+            justify-content: center;
+          }
+        }
+      }
+    }
+    // stylelint-enable max-nesting-depth
+  }
+  &__table-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    @include for-desktop-up {
+      display: block;
+    }
+  }
+  &__table-row {
+    display: grid;
+    grid-template-areas:
+      'col_11 col_21'
+      'col_12 col_22'
+      'col_13 col_23'
+      'col_14 col_24'
+      'col_15 col_25'
+      'col_16 col_26';
+    grid-template-columns: 160px 1fr;
+    padding-bottom: 16px;
+    border-bottom: 1px solid color(gray, 100);
+    row-gap: 8px;
+    @include for-desktop-up {
+      grid-template-areas: initial;
+      grid-template-columns: minmax(160px, 180px) minmax(100px, 140px) minmax(140px, 154px) minmax(180px, 221px) minmax(
+          120px,
+          140px
+        ) minmax(84px, 84px);
+      padding-bottom: initial;
+      border-bottom: 0 none;
+      row-gap: initial;
+    }
+    @include for-wide-desktop-up {
+      grid-template-columns: minmax(160px, 172px) minmax(100px, 130px) minmax(140px, 154px) minmax(180px, 207px) minmax(
+          120px,
+          140px
+        ) minmax(84px, 84px);
+    }
+    :nth-child(1 of .customers__table-cell--value) {
+      @include for-desktop-up {
+        font-weight: 500;
+      }
+    }
+  }
+  &__table-cell {
+    font-size: 14px;
+    font-weight: 500;
+    @include for-desktop-up {
+      padding: 24px 0;
+      border-bottom: 1px solid color(gray, 100);
+      line-height: 30px;
+    }
+    &:nth-child(n + 1):nth-child(-n + 6) {
+      color: color(blue, 800);
+    }
+    // stylelint-disable scss/no-global-function-names
+    @for $i from 1 through length($areas) {
+      &:nth-child(#{$i}) {
+        grid-area: nth($areas, $i);
+        padding-right: 8px;
+        @include for-desktop-up {
+          grid-area: initial;
+          padding-right: 0;
+        }
+      }
+    }
+    // stylelint-enable scss/no-global-function-names
+    &--name {
+      @include for-desktop-up {
+        display: none;
+      }
+    }
+  }
+}

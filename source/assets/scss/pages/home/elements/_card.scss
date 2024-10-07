@@ -1,0 +1,22 @@
+.card {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 10px 60px rgba(226, 236, 249, 0.5);
+  @include for-tablet-up {
+    padding: 16px;
+    border-radius: 12px;
+  }
+  @include for-laptop-up {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  @include for-desktop-up {
+    padding: 24px;
+    border-radius: 20px;
+  }
+  @include for-wide-desktop-up {
+    padding: 30px 40px 40px;
+    border-radius: 30px;
+  }
+}

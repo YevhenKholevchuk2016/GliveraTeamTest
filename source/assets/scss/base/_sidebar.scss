@@ -1,0 +1,22 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  width: 306px;
+  height: 100vh;
+  overflow-y: auto;
+  transition:
+    opacity 0.225s ease,
+    translate 0.225s ease;
+  opacity: 0;
+  background-color: white;
+  box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+  pointer-events: none;
+  translate: -100% 0;
+  will-change: opacity, translate;
+  @include for-wide-desktop-up {
+    position: sticky;
+    opacity: 1;
+    pointer-events: initial;
+    translate: 0 0;
+  }
+}

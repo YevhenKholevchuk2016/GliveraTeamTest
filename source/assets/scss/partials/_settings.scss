@@ -1,0 +1,32 @@
+// stylelint-disable scss/dollar-variable-empty-line-after, scss/dollar-variable-colon-space-after
+// typography
+$base-font-family: 'Poppins', 'Segoe UI', tahoma, geneva, verdana, sans-serif;
+$base-font-size: 16px;
+
+// colors
+$app-colors: (
+  gray: (
+    100: #eee,
+    200: #fafbff,
+    300: #b5b7c0,
+    400: #292d32,
+  ),
+  blue: (
+    800: #292d32,
+  ),
+  green: (
+    400: #16c098,
+    500: #00b087,
+    600: #008767,
+  ),
+  red: (
+    400: #ffc5c5,
+    500: #df0404,
+  ),
+);
+
+// statics
+$path-to-static-images: '/assets/images/';
+$path-to-static-fonts: '/assets/fonts/';
+
+// stylelint-enable scss/dollar-variable-empty-line-after, scss/dollar-variable-colon-space-after
