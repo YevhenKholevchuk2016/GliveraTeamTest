@@ -1,76 +1,43 @@
 // stylelint-disable scss/dollar-variable-empty-line-after
 .search {
-  $_this: &;
   position: relative;
-  &__input,
-  &__select {
+  &__input {
     width: 100%;
-    height: 50px;
-    padding: 12px 48px 12px 12px;
-    border: 1px solid $border-color-light;
+    height: 38px;
+    padding: 7px 8px 7px 40px;
+    transition: box-shadow 0.225s ease;
+    border: 0 none;
     border-radius: 8px;
-    background: transparent;
-    color: #7c7b88;
+    background-color: color(gray, 250);
+    color: color(gray, 400);
     font-family: $base-font-family;
-    font-size: $font-md;
+    font-size: 12px;
+    letter-spacing: -0.12px;
     &::placeholder {
-      color: $body-light;
+      color: color(gray, 300);
+      font-family: $base-font-family;
+      font-size: 12px;
+    }
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 2px 2px rgba(226, 236, 249, 0.85);
     }
   }
-  &__input-group {
-    position: relative;
-    width: 690px;
-  }
-  &__icon {
+  &__icon-figure {
+    display: flex;
     position: absolute;
     top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
-    color: #8d8d8d;
+    left: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    translate: 0 -50%;
   }
-  &__button {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  &__select {
-    max-width: 400px;
-  }
-  &--profile {
-    #{$_this}__button {
-      font-weight: 600;
-    }
-  }
-  &--vacancies {
-    #{$_this}__input {
-      padding-right: 490px;
-    }
-  }
-  &--projects {
-    #{$_this}__input-group {
-      position: relative;
-      width: 100%;
-    }
-
-    #{$_this}__input {
-      max-width: 100%;
-    }
-  }
-  &--organizer {
-    #{$_this}__input {
-      border-width: 2px;
-      border-color: color(light, outline-variant);
-    }
-  }
-  &--companies {
-    #{$_this}__input {
-      max-width: 692px;
-    }
-  }
-  &--companies,
-  &--projects {
-    display: flex;
-    gap: 8px;
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: color(gray, 350);
   }
 }
 // stylelint-enable scss/dollar-variable-empty-line-after

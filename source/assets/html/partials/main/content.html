@@ -5,7 +5,20 @@
     </header>
     <div class="home__content mt-50">
       <div class="card customers">
-        @@include('partials/main/partials/table.html')
+        <div class="card__header">
+          <h2 class="card__headline">All Customers</h2>
+          <p class="card__status">Active Members</p>
+          <div class="search card__search">
+            <figure class="search__icon-figure">
+              <svg class="custom-icon search__icon">
+                <use xlink:href="@@sprites_common__search"></use>
+              </svg>
+            </figure>
+            <label class="visually-hidden" for="Search">Search</label>
+            <input class="search__input" type="search" id="Search" placeholder="Search"/>
+          </div>
+        </div>
+        @@include('partials/main/partials/table.html', { "additional-class": "card__table" })
       </div>
     </div>
   </div>

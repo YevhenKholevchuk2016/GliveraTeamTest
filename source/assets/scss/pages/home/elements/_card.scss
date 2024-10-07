@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .card {
   padding: 12px;
   border-radius: 8px;
@@ -18,5 +20,50 @@
   @include for-wide-desktop-up {
     padding: 30px 40px 40px;
     border-radius: 30px;
+  }
+  &__header {
+    @include for-tablet-up {
+      display: grid;
+      grid-template-areas:
+        'headline search'
+        'status search';
+    }
+  }
+  &__headline {
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.22px;
+    line-height: math.div(33, 22);
+    @include for-tablet-up {
+      grid-area: headline;
+    }
+  }
+  &__status {
+    margin-top: 7px;
+    color: color(green, 400);
+    font-size: 14px;
+    letter-spacing: -0.14px;
+    line-height: math.div(21, 14);
+    @include for-tablet-up {
+      grid-area: status;
+    }
+  }
+  &__search {
+    margin-top: 12px;
+    @include for-tablet-up {
+      grid-area: search;
+      align-self: center;
+      width: 100%;
+      max-width: 216px;
+      margin-top: initial;
+      justify-self: end;
+    }
+    @include for-desktop-up {
+      margin-right: 13px;
+    }
+  }
+  &__table {
+    margin-top: 25px;
   }
 }

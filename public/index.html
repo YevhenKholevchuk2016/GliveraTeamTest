@@ -65,7 +65,20 @@
     </header>
     <div class="home__content mt-50">
       <div class="card customers">
-        <div class="customers__table" role="table">
+        <div class="card__header">
+          <h2 class="card__headline">All Customers</h2>
+          <p class="card__status">Active Members</p>
+          <div class="search card__search">
+            <figure class="search__icon-figure">
+              <svg class="custom-icon search__icon">
+                <use xlink:href="/assets/images/sprites/common/svg/symbols.svg#icon-search"></use>
+              </svg>
+            </figure>
+            <label class="visually-hidden" for="Search">Search</label>
+            <input class="search__input" type="search" id="Search" placeholder="Search"/>
+          </div>
+        </div>
+        <div class="customers__table card__table" role="table">
   <div class="customers__table-header" role="rowgroup">
     <div class="customers__table-row" role="row">
       <div class="customers__table-cell customers__table-cell--header-name" role="columnheader">Customer Name</div>
@@ -202,6 +215,23 @@
       <div class="customers__table-cell customers__table-cell--value" role="cell">(704) 555-0127</div>
       <div class="customers__table-cell customers__table-cell--value" role="cell">kristin@facebook.com</div>
       <div class="customers__table-cell customers__table-cell--value" role="cell">Åland Islands</div>
+      <div class="customers__table-cell customers__table-cell--value" role="cell">
+        <span class="badge badge--inactive">Inactive</span>
+      </div>
+    </div>
+
+    <div class="customers__table-row" role="row">
+      <div class="customers__table-cell customers__table-cell--name" role="cell">Customer Name</div>
+<div class="customers__table-cell customers__table-cell--name" role="cell">Company</div>
+<div class="customers__table-cell customers__table-cell--name" role="cell">Phone Number</div>
+<div class="customers__table-cell customers__table-cell--name" role="cell">Email</div>
+<div class="customers__table-cell customers__table-cell--name" role="cell">Country</div>
+<div class="customers__table-cell customers__table-cell--name" role="cell">Status</div>
+      <div class="customers__table-cell customers__table-cell--value" title="Long Customer Name Test Data" role="cell">Long Customer Name Test Data</div>
+      <div class="customers__table-cell customers__table-cell--value" role="cell">Company name</div>
+      <div class="customers__table-cell customers__table-cell--value" role="cell">(999) 999-9999</div>
+      <div class="customers__table-cell customers__table-cell--value" title="very-long-email-test@facebook.com" role="cell">very-long-email-test@facebook.com</div>
+      <div class="customers__table-cell customers__table-cell--value" role="cell">Country name</div>
       <div class="customers__table-cell customers__table-cell--value" role="cell">
         <span class="badge badge--inactive">Inactive</span>
       </div>

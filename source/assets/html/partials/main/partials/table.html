@@ -1,4 +1,4 @@
-<div class="customers__table" role="table">
+<div class="customers__table @@additional-class" role="table">
   <div class="customers__table-header" role="rowgroup">
     <div class="customers__table-row" role="row">
       <div class="customers__table-cell customers__table-cell--header-name" role="columnheader">Customer Name</div>
@@ -95,6 +95,18 @@
       <div class="customers__table-cell customers__table-cell--value" role="cell">(704) 555-0127</div>
       <div class="customers__table-cell customers__table-cell--value" role="cell">kristin@facebook.com</div>
       <div class="customers__table-cell customers__table-cell--value" role="cell">Åland Islands</div>
+      <div class="customers__table-cell customers__table-cell--value" role="cell">
+        <span class="badge badge--inactive">Inactive</span>
+      </div>
+    </div>
+
+    <div class="customers__table-row" role="row">
+      @@include('partials/main/partials/table-header.html')
+      <div class="customers__table-cell customers__table-cell--value" title="Long Customer Name Test Data" role="cell">Long Customer Name Test Data</div>
+      <div class="customers__table-cell customers__table-cell--value" role="cell">Company name</div>
+      <div class="customers__table-cell customers__table-cell--value" role="cell">(999) 999-9999</div>
+      <div class="customers__table-cell customers__table-cell--value" title="very-long-email-test@facebook.com" role="cell">very-long-email-test@facebook.com</div>
+      <div class="customers__table-cell customers__table-cell--value" role="cell">Country name</div>
       <div class="customers__table-cell customers__table-cell--value" role="cell">
         <span class="badge badge--inactive">Inactive</span>
       </div>
